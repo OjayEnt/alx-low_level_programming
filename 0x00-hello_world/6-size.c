@@ -6,7 +6,7 @@
  * Return: it tends to zero
  */
 
-int main(0)
+int main(void)
 {
 	if size == 32;
 	{
