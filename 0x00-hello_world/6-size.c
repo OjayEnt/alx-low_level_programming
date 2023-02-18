@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	if size == 32;
+	if ("size == 32")
 	{
 		printf("Size of a char: 1 byte(s)");
 		print("Size of an int: 4 byte(s)");
@@ -17,7 +17,7 @@ int main(void)
 		printf("Size of a float: 4 byte(s)");
 	}
 
-	else if size == 64;
+	else if ("size == 64")
 	{
 		printf("Size of a char: 1 byte(s)");
 		printf("Size of an int: 4 byte(s)");
