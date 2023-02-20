@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (i < j && i != j)
 			{
-				putchar(i + 'o');
-				putchar(j + 'o');
+				putchar(i + '0');
+				putchar(j + '0');
 				if (i + j != 17)
 				{
 					putchar(',');
