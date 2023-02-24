@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * _isupper - upper case
@@ -10,7 +9,7 @@
 
 int _isupper(int c)
 {
-	if (isupper(c))
+	if (_isupper(c))
 		printf("%c: 1\n", c);
 	else
 		printf("%c: 0\n", c);
