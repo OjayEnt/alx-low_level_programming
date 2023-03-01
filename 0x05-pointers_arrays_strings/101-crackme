@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+// Define the password length
+#define PASSWORD_LENGTH 8
+
+// Define the valid characters that can be used in the password
+const char valid_chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+{}[]<>?/|";
+
+// Define a function to generate a random password
+void generate_password(char* password)
+{
+
+	int i;
+
+		for (i = 0; i < PASSWORD_LENGHT; i++)
+		{
+		password[i] = valid_chars[rand() % strlen(valid_chars)];
+		}
+}
+
+int main() 
+{
+    char password[PASSWORD_LENGTH + 1]; // +1 for null termination
+    srand(time(NULL)); // Seed the random number generator with the current time
+
+    // Generate and print a random password
+    generate_password(password);
+    printf("Password: %s\n", password);
+
+    return 0;
+}
