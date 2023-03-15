@@ -1,35 +1,40 @@
-#include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - main argument
- * @argc: argument count
+ * main - adds positive numbers
+ *
+ * @argc: argument counter
  * @argv: argument vector
- * Return: zero
+ *
+ * Return: 1 if ERROR such as symbols that are not numbers,
+ * 0 if nothing is passed
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int sum = 0;
+	int c, d;
+	int n = 0;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 		printf("0\n");
+		return (0);
 	}
-	else
+
+	for (c = 1; c < argc; c++)
 	{
-		for (i = 1; i < argc ; i++)
+		for (d = 0; argv[c][d] != '\0'; d++)
 		{
-			if (!atoi(argv[i]))
+			if (argv[c][d] < '0' || argv[c][d] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
-				sum = sum + atoi(argv[i]);
 		}
-		printf("%d\n", sum);
+		n += atoi(argv[c]);
 	}
+	printf("%d\n", n);
 	return (0);
 }
