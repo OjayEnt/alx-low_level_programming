@@ -6,7 +6,7 @@
  * print_listint_safe - prints the nodes of a singly linked list
  * @head: list of type listint_t to print
  *
- * Return: counter variable
+ * Return: counter variables
  */
 
 size_t print_listint_safe(const listint_t *head)
@@ -27,6 +27,5 @@ size_t print_listint_safe(const listint_t *head)
 			break;
 		}
 	}
-
 	return (count);
 }
